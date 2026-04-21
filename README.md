@@ -27,5 +27,6 @@
 <details>
 <summary>🔑 Нажмите на текст,ниже будет ссылка</summary>
 
-Основная ссылка: https://raw.githubusercontent.com/cinev505/VlessTrogan-vpn-key/refs/heads/main/All-keys
-Белые списки: https://raw.githubusercontent.com/cinev505/VlessTrogan-vpn-key/refs/heads/main/Whitelist-key
+Основная ссылка: 
+https://github.com/cinev505/VlessTrogan-vpn-key/blob/main/WhiteList-VPN-Vless
+Отдельный json ключ с обходом Белых Списков: 
