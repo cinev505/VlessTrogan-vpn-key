@@ -29,4 +29,4 @@
 
 Основная ссылка: 
 https://github.com/cinev505/VlessTrogan-vpn-key/blob/main/WhiteList-VPN-Vless
-Отдельный json ключ с обходом Белых Списков: 
+Отдельный json ключ с обходом Белых Списков: https://raw.githubusercontent.com/cinev505/VlessTrogan-vpn-key/refs/heads/main/jsonKey.txt
