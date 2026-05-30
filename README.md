@@ -29,5 +29,7 @@
 
 Основная ссылка: 
 https://github.com/cinev505/VlessTrogan-vpn-key/blob/main/WhiteList-VPN-Vless
+
 Большая подписка
-https://raw.githubusercontent.com/cinev505/VlessTrogan-vpn-key/refs/heads/main/jsonKey.txt
+https://raw.githubusercontent.com/cinev505/VlessTrogan-vpn-key/refs/heads/main/Large%20subscription.txt
+
