@@ -1,3 +1,6 @@
+#profile-update-interval: 0
+#announce: Владелец @QbisQ, Приятного использования!
+#subscription-userinfo: upload=0; download=0; total=0; expire=0
 vless://e7cb547e-5a74-4695-9019-a2c93e7593ea@ru40.whost-solutions.ru:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=IAdOYYmEMPFAhpVUhqfML58AVtYPdAb71R_HAPf0N0k&security=reality&sid=&sni=ru21.whost-solutions.ru&type=#%F0%9F%87%B7%F0%9F%87%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%231%20%7C%20LTE%20%7C%20%D1%82%D0%B3%D0%BA%3A%20Vlesstrogan
 vless://e7cb547e-5a74-4695-9019-a2c93e7593ea@ru49.whost-solutions.ru:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=IAdOYYmEMPFAhpVUhqfML58AVtYPdAb71R_HAPf0N0k&security=reality&sid=&sni=ru.whost-solutions.ru&type=#%F0%9F%87%B7%F0%9F%87%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%232%20%7C%20LTE%20%7C%20%D1%82%D0%B3%D0%BA%3A%20Vlesstrogan
 vless://e7cb547e-5a74-4695-9019-a2c93e7593ea@ru50.whost-solutions.ru:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=IAdOYYmEMPFAhpVUhqfML58AVtYPdAb71R_HAPf0N0k&security=reality&sid=&sni=ru21.whost-solutions.ru&type=#%F0%9F%87%B7%F0%9F%87%BA%20%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%233%20%7C%20LTE%20%7C%20%D1%82%D0%B3%D0%BA%3A%20Vlesstrogan
