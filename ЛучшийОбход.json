@@ -1,0 +1,1871 @@
+{
+  "dns": {
+    "tag": "dns-in",
+    "hosts": {
+      "dns.google": [
+        "8.8.8.8",
+        "8.8.4.4"
+      ],
+      "common.dot.dns.yandex.net": [
+        "77.88.8.1",
+        "77.88.8.8"
+      ]
+    },
+    "servers": [
+      {
+        "address": "https://dns.google/dns-query",
+        "timeoutMs": 500
+      },
+      {
+        "address": "https://dns.cloudflare.com/dns-query",
+        "timeoutMs": 500
+      },
+      {
+        "address": "https+local://common.dot.dns.yandex.net/dns-query",
+        "domains": [
+          "full:dns.cloudflare.com",
+          "domain:blanesik.space",
+          "domain:vhub.pro",
+          "domain:vhubtest.ru",
+          "domain:vpnhub.shop",
+          "domain:fwqfw783rg2dad.website",
+          "domain:tyr-agentstvo.tech"
+        ],
+        "timeoutMs": 500,
+        "skipFallback": true
+      }
+    ],
+    "serveStale": true,
+    "disableCache": false,
+    "queryStrategy": "UseIPv4",
+    "useSystemHosts": false,
+    "serveExpiredTTL": 300,
+    "enableParallelQuery": false
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "connIdle": 120,
+        "handshake": 10,
+        "bufferSize": 128,
+        "uplinkOnly": 0,
+        "downlinkOnly": 0,
+        "statsUserUplink": false,
+        "statsUserDownlink": false
+      }
+    },
+    "system": {
+      "statsInboundUplink": false,
+      "statsOutboundUplink": false,
+      "statsInboundDownlink": false,
+      "statsOutboundDownlink": false
+    }
+  },
+  "routing": {
+    "rules": [
+      {
+        "port": "22,25,135-139,465,587,593,2525,3306,3389,5432,6379,11211,1900",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:codeium.com",
+          "domain:codeiumdata.com",
+          "domain:windsurf.build",
+          "domain:windsurf.com"
+        ],
+        "balancerTag": "Balancer"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:ipify.org",
+          "domain:checkip.amazonaws.com",
+          "domain:ifconfig.me",
+          "domain:ipapi.is",
+          "domain:iplocate.io",
+          "domain:ip.sb",
+          "domain:2ip.ru",
+          "domain:government.ru",
+          "domain:gov.ru",
+          "domain:gosuslugi.ru",
+          "domain:gu-st.ru",
+          "domain:emias.info",
+          "domain:mgfoms.ru",
+          "domain:edu.ru",
+          "domain:cbr.ru",
+          "domain:cikrf.ru",
+          "domain:ebs.ru",
+          "domain:goskey.ru",
+          "domain:grfc.ru",
+          "domain:izbirkom.ru",
+          "domain:kremlin.ru",
+          "domain:mil.ru",
+          "domain:nalog.ru",
+          "domain:xn--80ajghhoc2aj1c8b.xn--p1ai",
+          "domain:mos.ru",
+          "domain:mosreg.ru",
+          "domain:spb.ru",
+          "domain:sevastopol.ru",
+          "domain:sev.ru",
+          "domain:adygeya.ru",
+          "domain:bashkiria.ru",
+          "domain:buryatia.ru",
+          "domain:chuvashia.ru",
+          "domain:crimea.ru",
+          "domain:dagestan.ru",
+          "domain:grozny.ru",
+          "domain:i-ola.ru",
+          "domain:izhevsk.ru",
+          "domain:kalmykia.ru",
+          "domain:karelia.ru",
+          "domain:kazan.ru",
+          "domain:kchr.ru",
+          "domain:khakassia.ru",
+          "domain:mari-el.ru",
+          "domain:mari.ru",
+          "domain:mordovia.ru",
+          "domain:nalchik.ru",
+          "domain:ptz.ru",
+          "domain:rkomi.ru",
+          "domain:tatarstan.ru",
+          "domain:tuva.ru",
+          "domain:udm.ru",
+          "domain:udmurtia.ru",
+          "domain:ulan-ude.ru",
+          "domain:vladikavkaz.ru",
+          "domain:yakutia.ru",
+          "domain:altai.ru",
+          "domain:chita.ru",
+          "domain:kamchatka.ru",
+          "domain:khabarovsk.ru",
+          "domain:khv.ru",
+          "domain:krasnodar.su",
+          "domain:krasnoyarsk.ru",
+          "domain:kuban.ru",
+          "domain:marine.ru",
+          "domain:perm.ru",
+          "domain:stavropol.ru",
+          "domain:stv.ru",
+          "domain:vl.ru",
+          "domain:vladivostok.ru",
+          "domain:amur.ru",
+          "domain:arkhangelsk.ru",
+          "domain:astrakhan.ru",
+          "domain:belgorod.ru",
+          "domain:bir.ru",
+          "domain:bryansk.ru",
+          "domain:cbg.ru",
+          "domain:chel.ru",
+          "domain:chelyabinsk.ru",
+          "domain:ekburg.ru",
+          "domain:xn--80acgfbsl1azdqr.xn--p1ai",
+          "domain:irk.ru",
+          "domain:irkutsk.ru",
+          "domain:ivanovo.ru",
+          "domain:jar.ru",
+          "domain:kaluga.ru",
+          "domain:kemerovo.ru",
+          "domain:kirov.ru",
+          "domain:koenig.ru",
+          "domain:kostroma.ru",
+          "domain:kurgan.ru",
+          "domain:kursk.ru",
+          "domain:lipetsk.ru",
+          "domain:magadan.ru",
+          "domain:murmansk.ru",
+          "domain:nn.ru",
+          "domain:nov.ru",
+          "domain:novosibirsk.ru",
+          "domain:nsk.ru",
+          "domain:omsk.ru",
+          "domain:orb.ru",
+          "domain:oryol.ru",
+          "domain:penza.ru",
+          "domain:psk",
+          "domain:psk.ru",
+          "domain:pskov.ru",
+          "domain:rnd.ru",
+          "domain:ryazan.ru",
+          "domain:sakhalin.ru",
+          "domain:samara.ru",
+          "domain:saratov.ru",
+          "domain:simbirsk.ru",
+          "domain:smolensk.ru",
+          "domain:tambov.ru",
+          "domain:tom.ru",
+          "domain:tomsk.ru",
+          "domain:tsaritsyn.ru",
+          "domain:tsk.ru",
+          "domain:tula.ru",
+          "domain:tver.ru",
+          "domain:tyumen.ru",
+          "domain:vladimir.ru",
+          "domain:vlg.ru",
+          "domain:volgograd.ru",
+          "domain:vologda.ru",
+          "domain:voronezh.ru",
+          "domain:vrn.ru",
+          "domain:vyatka.ru",
+          "domain:yaroslavl.ru",
+          "domain:yuzhno-sakhalinsk.ru",
+          "domain:chukotka.ru",
+          "domain:jamal.ru",
+          "domain:surgut.ru",
+          "domain:yamal.ru",
+          "domain:zdrav10.ru",
+          "domain:1c-bitrix.ru",
+          "domain:1c.ru",
+          "domain:1cfresh.com",
+          "domain:1cloud.ru",
+          "domain:1internet.tv",
+          "domain:2gis.ae",
+          "domain:2gis.am",
+          "domain:2gis.az",
+          "domain:2gis.by",
+          "domain:2gis.com",
+          "domain:2gis.com.cy",
+          "domain:2gis.cz",
+          "domain:2gis.ge",
+          "domain:2gis.kg",
+          "domain:2gis.kz",
+          "domain:2gis.ru",
+          "domain:2gis.tj",
+          "domain:2gis.ua",
+          "domain:2gis.uz",
+          "domain:47news.ru",
+          "domain:4meeting.me",
+          "domain:5ka.ru",
+          "domain:5post.market",
+          "domain:abr.ru",
+          "domain:aclub.ru",
+          "domain:adfox.ru",
+          "domain:admetrica.ru",
+          "domain:aeroflot.ru",
+          "domain:alfa-bank.com",
+          "domain:alfa-bank.ru",
+          "domain:alfa-finance.com",
+          "domain:alfa-fx.com",
+          "domain:alfa-pc.com",
+          "domain:alfa-usa.com",
+          "domain:alfabank.com",
+          "domain:alfabank.ru",
+          "domain:alfafinance.biz",
+          "domain:alfafinance.ru",
+          "domain:alfafuture.com",
+          "domain:alfafuture.ru",
+          "domain:alfafx.com",
+          "domain:alfaleasing.ru",
+          "domain:alfaprivate.com",
+          "domain:alformacap.com",
+          "domain:alformacapital.com",
+          "domain:auth-nsdi.ru",
+          "domain:auto.ru",
+          "domain:av.ru",
+          "domain:avito.ru",
+          "domain:avito.st",
+          "domain:baltbank.ru",
+          "domain:banka-ui.dev",
+          "domain:banki.ru",
+          "domain:bankline.ru",
+          "domain:beeline.ru",
+          "domain:beta-bank.com",
+          "domain:bitrix24.ru",
+          "domain:bronevik.com",
+          "domain:cdn-tinkoff.ru",
+          "domain:cdn-vk.ru",
+          "domain:chizhik.club",
+          "domain:citydrive.ru",
+          "domain:clstorage.net",
+          "domain:credistory.ru",
+          "domain:csat.ru",
+          "domain:cscampus.ru",
+          "domain:dbo-dengi.online",
+          "domain:dellin.ru",
+          "domain:dixy.ru",
+          "domain:dnevnik.ru",
+          "domain:dns-shop.ru",
+          "domain:dodopizza.ru",
+          "domain:dom.ru",
+          "domain:domclick.ru",
+          "domain:donationalerts.com",
+          "domain:drweb.ru",
+          "domain:dzen.ru",
+          "domain:dzeninfra.ru",
+          "domain:e5.ru",
+          "domain:edadeal.io",
+          "domain:edadeal.ru",
+          "domain:fastvps.ru",
+          "domain:finuslugi.ru",
+          "domain:fivepost.ru",
+          "domain:fix-price.com",
+          "domain:gazeta.ru",
+          "domain:gazprombank.ru",
+          "domain:gazprombank.tech",
+          "domain:gazprompay.ru",
+          "domain:gorodpay.ru",
+          "domain:gpb.ru",
+          "domain:gpmdi.ru",
+          "domain:hh.ru",
+          "domain:idx5.ru",
+          "domain:imgsmail.ru",
+          "domain:investalfabank.com",
+          "domain:iz.ru",
+          "domain:jivo.ru",
+          "domain:jivochat.com",
+          "domain:jivosite.com",
+          "domain:jx5.ru",
+          "domain:kaspersky.com",
+          "domain:kaspersky.ru",
+          "domain:kazanexpress.ru",
+          "domain:kinopoisk.ru",
+          "domain:kommersant.ru",
+          "domain:kp.ru",
+          "domain:krasyar.ru",
+          "domain:krd.ru",
+          "domain:kuper.ru",
+          "domain:lead-pro2023.online",
+          "domain:lemanapro.ru",
+          "domain:lenta.com",
+          "domain:lenta.ru",
+          "domain:lmru.tech",
+          "domain:magnit.ru",
+          "domain:mail.ru",
+          "domain:max.ru",
+          "domain:megafon.ru",
+          "domain:megamarket.ru",
+          "domain:megamarket.tech",
+          "domain:memealerts.com",
+          "domain:mirpayonline.ru",
+          "domain:miya-news.online",
+          "domain:mm.ru",
+          "domain:mnogolososya.ru",
+          "domain:moex.com",
+          "domain:mradx.net",
+          "domain:mts.ru",
+          "domain:mtsdengi.ru",
+          "domain:mvk.com",
+          "domain:myapelsin.ru",
+          "domain:mycdn.me",
+          "domain:mymts.ru",
+          "domain:naydex.net",
+          "domain:nbki.ru",
+          "domain:netmonet.co",
+          "domain:nspk.ru",
+          "domain:ok.ru",
+          "domain:okcdn.ru",
+          "domain:okko.sport",
+          "domain:okko.tv",
+          "domain:okolo.app",
+          "domain:oneme.ru",
+          "domain:ozon.ru",
+          "domain:ozone.ru",
+          "domain:ozonusercontent.com",
+          "domain:perekrestok.ru",
+          "domain:pochta.ru",
+          "domain:psbank.ru",
+          "domain:psblog.ru",
+          "domain:qms.ru",
+          "domain:rambler.ru",
+          "domain:rbc.ru",
+          "domain:res-nsdi.ru",
+          "domain:rostaxi.org",
+          "domain:rostelecom.ru",
+          "domain:rshb.ru",
+          "domain:rt.ru",
+          "domain:rtbcdn.ru",
+          "domain:russiacalling.com",
+          "domain:rutube.ru",
+          "domain:rutubelist.ru",
+          "domain:rzd-bonus.ru",
+          "domain:rzd.ru",
+          "domain:sbermarket.ru",
+          "domain:sbermegamarket.ru",
+          "domain:sbpgpb.ru",
+          "domain:sistema-capital.com",
+          "domain:spvb.ru",
+          "domain:static-storage.net",
+          "domain:svoy.academy",
+          "domain:t2.ru",
+          "domain:tamtam.chat",
+          "domain:taximaxim.ru",
+          "domain:taxsee.com",
+          "domain:tbank-online.com",
+          "domain:tele2.ru",
+          "domain:timeweb.cloud",
+          "domain:timeweb.com",
+          "domain:tips.tips",
+          "domain:tnt-online.ru",
+          "domain:tochka-tech.com",
+          "domain:tochka.com",
+          "domain:topdelivery.ru",
+          "domain:trbcdn.net",
+          "domain:tsx.x5static.net",
+          "domain:tu-tu.ru",
+          "domain:turbopages.org",
+          "domain:tutu.ru",
+          "domain:usedesk.ru",
+          "domain:userapi.com",
+          "domain:uxfeedback.ru",
+          "domain:vgtrk.ru",
+          "domain:victoria-group.ru",
+          "domain:vk-analytics.ru",
+          "domain:vk-apps.com",
+          "domain:vk-apps.ru",
+          "domain:vk-cdn.me",
+          "domain:vk-cdn.net",
+          "domain:vk-portal.net",
+          "domain:vk.cc",
+          "domain:vk.com",
+          "domain:vk.company",
+          "domain:vk.design",
+          "domain:vk.link",
+          "domain:vk.me",
+          "domain:vk.ru",
+          "domain:vk.team",
+          "domain:vkcache.com",
+          "domain:vkcloud-static.ru",
+          "domain:vkgo.app",
+          "domain:vklive.app",
+          "domain:vkmessenger.app",
+          "domain:vkmessenger.com",
+          "domain:vkontakte.ru",
+          "domain:vkuser.net",
+          "domain:vkuseraudio.com",
+          "domain:vkuseraudio.net",
+          "domain:vkuseraudio.ru",
+          "domain:vkusercdn.ru",
+          "domain:vkuserlive.net",
+          "domain:vkuserphoto.ru",
+          "domain:vkuservideo.com",
+          "domain:vkuservideo.net",
+          "domain:vkuservideo.ru",
+          "domain:vkusnoitochka.ru",
+          "domain:vkusvill.ru",
+          "domain:vkvideo.ru",
+          "domain:vtb-grants.fut.ru",
+          "domain:vtb-liga.fut.ru",
+          "domain:vtb-russia.com",
+          "domain:vtb.bank.in",
+          "domain:vtb.com",
+          "domain:vtb.corp.ru",
+          "domain:vtb.digital",
+          "domain:vtb.fut.ru",
+          "domain:vtb.promo",
+          "domain:vtb.ru",
+          "domain:vtb24.com",
+          "domain:vtb24.ru",
+          "domain:vtbcareer.com",
+          "domain:vtbfamily.ru",
+          "domain:vtbindia.com",
+          "domain:vtbkep.site",
+          "domain:vtbpartners.com",
+          "domain:vtbrussia.com",
+          "domain:vtbrussia.ru",
+          "domain:vtbstrana.ru",
+          "domain:wb.ru",
+          "domain:webvisor.com",
+          "domain:webvisor.org",
+          "domain:whoosh.bike",
+          "domain:wildberries.ru",
+          "domain:windsurf.com",
+          "domain:wink.ru",
+          "domain:x5.ru",
+          "domain:x5.tech",
+          "domain:x5club.ru",
+          "domain:x5id.ru",
+          "domain:x5l.ru",
+          "domain:x5paket.ru",
+          "domain:x5q.ru",
+          "domain:xn----7sb7akeedqd.xn--p1ai",
+          "domain:xn--80aacoonefzg3am8b1fsb.xn--p1ai",
+          "domain:xn--90ab2c.xn--p1ai",
+          "domain:xn--90aifd0aza.site",
+          "domain:xn--b1aew.xn--p1ai",
+          "domain:xn--d1acpjx3f.xn--p1ai",
+          "domain:ya.ru",
+          "domain:yads.tech",
+          "domain:yandex",
+          "domain:yandex-bank.net",
+          "domain:yandex-team.ru",
+          "domain:yandex.aero",
+          "domain:yandex.az",
+          "domain:yandex.by",
+          "domain:yandex.cloud",
+          "domain:yandex.co.il",
+          "domain:yandex.com",
+          "domain:yandex.com.am",
+          "domain:yandex.com.ge",
+          "domain:yandex.com.ru",
+          "domain:yandex.com.tr",
+          "domain:yandex.com.ua",
+          "domain:yandex.de",
+          "domain:yandex.ee",
+          "domain:yandex.eu",
+          "domain:yandex.fi",
+          "domain:yandex.fr",
+          "domain:yandex.jobs",
+          "domain:yandex.kg",
+          "domain:yandex.kz",
+          "domain:yandex.lt",
+          "domain:yandex.lv",
+          "domain:yandex.md",
+          "domain:yandex.net",
+          "domain:yandex.org",
+          "domain:yandex.pl",
+          "domain:yandex.ru",
+          "domain:yandex.st",
+          "domain:yandex.sx",
+          "domain:yandex.tj",
+          "domain:yandex.tm",
+          "domain:yandex.tr",
+          "domain:yandex.ua",
+          "domain:yandex.uz",
+          "domain:yandexadexchange.net",
+          "domain:yandexcloud.net",
+          "domain:yandexcom.net",
+          "domain:yandexmetrica.com",
+          "domain:yandexwebcache.net",
+          "domain:yandexwebcache.org",
+          "domain:yastat.net",
+          "domain:yastatic-net.ru",
+          "domain:yastatic.net",
+          "domain:yota.ru",
+          "domain:youla-web-static.mrgcdn.ru",
+          "domain:youla.io",
+          "domain:youla.ru",
+          "domain:zentotem.net",
+          "domain:hematonix.ru",
+          "domain:medtrum.ru",
+          "domain:medtrum.eu",
+          "domain:anytimeru.com",
+          "domain:lumiflex.ru",
+          "domain:ican-sinocare.ru",
+          "domain:freestylediabetes.ru",
+          "domain:rsscenter.cloud",
+          "domain:dbankcloud.ru"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "127.0.0.0/8",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.88.99.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "224.0.0.0/3",
+          "::/127",
+          "fc00::/7",
+          "fe80::/10",
+          "ff00::/8"
+        ],
+        "type": "field",
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "balancerTag": "Balancer"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "Balancer",
+        "selector": [
+          "mobile"
+        ],
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "expected": 1
+          }
+        },
+        "fallbackTag": "mobile-5359d80480d24cf5ea74aafe539c8de3d6730ddd6919ca6a84d7856e1cb23a7ab91c28c28de10645bf305781242ed2243be63743942c0cf0052ff0ee3698738a"
+      }
+    ],
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "mobile-from-hosts",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "217.150.197.54",
+            "port": 8443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "2.26.148.147.tyr-agentstvo.tech",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 16,
+        "xudpConcurrency": 0,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "176.109.88.223",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "31.59.125.111.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "31.59.125.111.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 16,
+        "xudpConcurrency": 0,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "176.109.88.223",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "13.143.130.73.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "13.143.130.73.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ]
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 16,
+        "xudpConcurrency": 0,
+        "xudpProxyUDP443": "reject"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-4",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "51.250.91.218",
+            "port": 8443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-5",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.159.147",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "194.59.40.238",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.171.90",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-8",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.198.63",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-9",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.196.224",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-10",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "84.201.128.112",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-11",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.171.90",
+            "port": 8443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-12",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.143.169",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-from-hosts-13",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "158.160.199.95",
+            "port": 443,
+            "users": [
+              {
+                "id": "391f093f-85fc-473d-abe2-ea607b9ff567",
+                "encryption": "none",
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/websocket?ed=2560",
+          "host": "cloudflare.fwqfw783rg2dad.website",
+          "headers": {
+            "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+            "priority": "u=0, i",
+            "sec-ch-ua": "Not/A)Brand;v=99, Chromium;v=148",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+            "sec-ch-ua-arch": "x86",
+            "sec-fetch-dest": "document",
+            "sec-fetch-mode": "navigate",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "accept-encoding": "gzip, deflate, br, zstd",
+            "accept-language": "en-US,en;q=0.9",
+            "sec-ch-ua-model": "",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-bitness": "64",
+            "sec-ch-ua-platform": "Linux",
+            "sec-ch-ua-full-version": "148.0.7778.167",
+            "upgrade-insecure-requests": "1",
+            "sec-ch-ua-platform-version": "",
+            "sec-ch-ua-full-version-list": "Not/A)Brand;v=99.0.0.0, Chromium;v=148.0.7778.167"
+          },
+          "heartbeatPeriod": 10
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "cloudflare.fwqfw783rg2dad.website",
+          "fingerprint": "firefox",
+          "alpn": [
+            "http/1.1"
+          ],
+          "pinnedPeerCertSha256": "5ef4fe4d02789c5b036d8f25d1348bb82d43f180b9dccb8adbab22e448ca1c84"
+        },
+        "sockopt": {
+          "tcpFastOpen": true,
+          "happyEyeballs": {
+            "interleave": 1,
+            "tryDelayMs": 250,
+            "prioritizeIPv6": false,
+            "maxConcurrentTry": 4
+          },
+          "tcpcongestion": "bbr"
+        }
+      },
+      "mux": {
+        "enabled": true,
+        "concurrency": 8,
+        "xudpConcurrency": 16,
+        "xudpProxyUDP443": "skip"
+      }
+    },
+    {
+      "tag": "mobile-5359d80480d24cf5ea74aafe539c8de3d6730ddd6919ca6a84d7856e1cb23a7ab91c28c28de10645bf305781242ed2243be63743942c0cf0052ff0ee3698738a",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 8443,
+            "users": [
+              {
+                "id": "ce7a42f6-5c9e-410f-8c76-b6379637a828",
+                "flow": "",
+                "encryption": "none"
+              }
+            ],
+            "address": "79.174.92.133"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "a48d397391861a3c",
+          "publicKey": "M_V1dM8_wcpwnmh2VZp-s3LCBjy38ZWCRpxLrBc58Do",
+          "serverName": "max.ru",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-feb0dc96706e90cd2e841018d6a39a0aa2420166536d7d763b9bf44ecc691b33e309f02a0e0307738d7e2672edc25c9260647d20a29bc54121a10491974318bd",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "4ea258fd-f5e6-4a6a-8d12-0818ea603ff1",
+                "flow": "",
+                "encryption": "none"
+              }
+            ],
+            "address": "cdn.doramata.ru"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "alpn": [
+            "h3",
+            "h2",
+            "http/1.1"
+          ],
+          "serverName": "cdn.doramata.ru",
+          "fingerprint": "firefox"
+        },
+        "xhttpSettings": {
+          "host": "cdn.doramata.ru",
+          "mode": "packet-up",
+          "path": "/uploadfiles/",
+          "extra": {
+            "mode": "packet-up",
+            "path": "/uploadfiles/",
+            "xPaddingKey": "_dc",
+            "xPaddingHeader": "X-Cache",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader"
+          }
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "154.83.246.3"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "500aec9e9e5e2212",
+          "publicKey": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780-1",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "154.83.246.3"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "500aec9e9e5e2212",
+          "publicKey": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780-2",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "45.192.2.72"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "f34818a561dfd1fe",
+          "publicKey": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780-3",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "45.196.161.208"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "500aec9e9e5e2212",
+          "publicKey": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780-4",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "154.83.246.3"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "500aec9e9e5e2212",
+          "publicKey": "pPi-WO8qQFFZ9UJWNLW9YClbjcoAAZWJQ2_FM3Kjhz8",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "mobile-c0f66b0248731f2c5527fe209d3a4d077d9d8f2fe95e360ed9941d73abc277f046deee5a71023d2b4946e011d7ba09006ee539aa59684d3e66570832818e1780-5",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "port": 443,
+            "users": [
+              {
+                "id": "9b1f0077-04e5-4e20-bfba-ef92769ce147",
+                "flow": "xtls-rprx-vision",
+                "encryption": "none"
+              }
+            ],
+            "address": "45.195.111.108"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "tcpSettings": {},
+        "realitySettings": {
+          "shortId": "f4b4a6365558ea2e",
+          "publicKey": "7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg",
+          "serverName": "storage.yandex.net",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "direct-fragment",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "length": "10-20",
+          "packets": "tlshello",
+          "interval": "5-10"
+        }
+      }
+    }
+  ],
+  "observatory": {
+    "probeUrl": "http://cp.cloudflare.com/generate_204",
+    "probeInterval": "30m",
+    "subjectSelector": [
+      "mobile"
+    ],
+    "enableConcurrency": true
+  },
+  "remarks": "🇪🇺 AUTO — Обход БС Vlesstrogan"
+}
